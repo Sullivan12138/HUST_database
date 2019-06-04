@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.caigouController">
+   <children>
+      <Label alignment="CENTER" layoutX="242.0" layoutY="14.0" prefHeight="59.0" prefWidth="117.0" text="商品采购" textFill="#2414d7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="143.0" prefHeight="24.0" prefWidth="81.0" text="存放地点">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="193.0" prefHeight="15.0" prefWidth="57.0" />
+      <Label layoutX="29.0" layoutY="193.0" prefHeight="24.0" prefWidth="81.0" text="货品数量">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <JFXTextField fx:id="amount" layoutX="123.0" layoutY="182.0" prefHeight="23.0" prefWidth="161.0">
+         <font>
+            <Font name="Microsoft YaHei" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="29.0" layoutY="93.0" prefHeight="24.0" prefWidth="81.0" text="货品名">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="307.0" layoutY="143.0" prefHeight="24.0" prefWidth="81.0" text="生产厂家">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="307.0" layoutY="93.0" prefHeight="24.0" prefWidth="81.0" text="货品号">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="factory" layoutX="391.0" layoutY="130.0" prefHeight="23.0" prefWidth="161.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="registerButton" buttonType="RAISED" defaultButton="true" layoutX="226.0" layoutY="256.0" onMouseClicked="#on_register_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="登记" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearButton" buttonType="RAISED" defaultButton="true" layoutX="348.0" layoutY="256.0" onMouseClicked="#on_clear_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="清除" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="exitButton" buttonType="RAISED" defaultButton="true" layoutX="472.0" layoutY="256.0" onMouseClicked="#on_exit_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="退出" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="seeLackListButton" buttonType="RAISED" defaultButton="true" layoutX="32.0" layoutY="256.0" onMouseClicked="#on_seeLackList_clicked" prefHeight="31.0" prefWidth="136.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="查看当前缺货表" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="seeImportButton" buttonType="RAISED" defaultButton="true" layoutX="32.0" layoutY="312.0" onMouseClicked="#on_seeImport_clicked" prefHeight="31.0" prefWidth="136.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="查看当前进货表" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="wareNumber" layoutX="391.0" layoutY="94.0" prefHeight="23.0" prefWidth="161.0" />
+      <JFXComboBox fx:id="wareName" layoutX="123.0" layoutY="101.0" prefHeight="23.0" prefWidth="161.0" />
+      <JFXComboBox fx:id="storagePlace" layoutX="123.0" layoutY="144.0" prefHeight="23.0" prefWidth="161.0" />
+   </children>
+</AnchorPane>
