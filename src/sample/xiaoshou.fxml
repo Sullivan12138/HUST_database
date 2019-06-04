@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.xiaoshouController">
+   <children>
+      <Label alignment="CENTER" layoutX="253.0" layoutY="6.0" prefHeight="59.0" prefWidth="117.0" text="货物出库" textFill="#2414d7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="64.0" prefHeight="15.0" prefWidth="57.0" text="货品名" />
+      <Label layoutX="379.0" layoutY="108.0" prefHeight="15.0" prefWidth="57.0" text="货品号" />
+      <Label layoutX="53.0" layoutY="193.0" prefHeight="15.0" prefWidth="57.0" />
+      <Label layoutX="379.0" layoutY="186.0" prefHeight="15.0" prefWidth="57.0" text="货品数量" />
+      <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="398.0" layoutY="243.0" onMouseClicked="#on_register_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="登记" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="amount" layoutX="439.0" layoutY="182.0" />
+      <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="398.0" layoutY="290.0" onMouseClicked="#on_clear_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="清除" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="exitButton" buttonType="RAISED" layoutX="398.0" layoutY="338.0" onMouseClicked="#on_exit_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="退出" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="chuhuoTable" layoutY="71.0" prefHeight="327.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="wareNameColumn" prefWidth="75.0" text="货品名" />
+          <TableColumn fx:id="wareNumberColumn" prefWidth="58.0" text="货品号" />
+            <TableColumn fx:id="timeColumn" prefWidth="96.0" text="出货时间" />
+            <TableColumn fx:id="amountColumn" prefWidth="65.0" text="数量" />
+            <TableColumn fx:id="storageColumn" prefWidth="71.0" text="存放地" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="477.0" layoutY="243.0" onMouseClicked="#on_delete_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="删除" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="477.0" layoutY="290.0" onMouseClicked="#on_update_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="修改" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="wareName" layoutX="439.0" layoutY="60.0" prefHeight="23.0" prefWidth="147.0" />
+      <JFXComboBox fx:id="wareNumber" layoutX="439.0" layoutY="104.0" prefHeight="23.0" prefWidth="147.0" />
+      <Label layoutX="379.0" layoutY="148.0" prefHeight="15.0" prefWidth="57.0" text="存放地" />
+      <JFXComboBox fx:id="storage" layoutX="439.0" layoutY="144.0" prefHeight="23.0" prefWidth="147.0" />
+   </children>
+</AnchorPane>

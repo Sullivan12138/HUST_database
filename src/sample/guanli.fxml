@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.guanliController">
+   <children>
+      <Label alignment="CENTER" layoutX="243.0" prefHeight="60.0" prefWidth="113.0" text="货物管理" textFill="#320ae4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="2.0" layoutY="57.0" prefHeight="344.0" prefWidth="594.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="新一批进货名单">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="2.0" layoutY="-1.0" prefHeight="315.0" prefWidth="594.0">
+                           <children>
+                              <TableView fx:id="jinhuo2Table" layoutX="-1.0" layoutY="2.0" prefHeight="283.0" prefWidth="594.0">
+                                <columns>
+                                  <TableColumn fx:id="jinhuo2wareNameColumn" prefWidth="75.0" text="货品名" />
+                                  <TableColumn fx:id="jinhuo2wareNumberColumn" prefWidth="75.0" text="货品号" />
+                                    <TableColumn fx:id="jinhuo2timeColumn" prefWidth="136.0" text="进货时间" />
+                                    <TableColumn fx:id="jinhuo2amountColumn" prefWidth="64.0" text="数量" />
+                                    <TableColumn fx:id="jinhuo2storageColumn" prefWidth="81.0" text="存放地" />
+                                    <TableColumn fx:id="jinhuo2factoryColumn" prefWidth="92.0" text="生产厂家" />
+                                    <TableColumn fx:id="jinhuo2approvedColumn" prefWidth="70.0" text="是否通过？" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="commitButton" layoutX="513.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#on_commit_clicked" text="提交" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="库存名单">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="kucunTable" layoutY="-1.0" prefHeight="313.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="kucunwareNameColumn" prefWidth="126.0" text="货品名" />
+                            <TableColumn fx:id="kucunwareNumberColumn" prefWidth="128.0" text="货品号" />
+                              <TableColumn fx:id="kucunfactoryColumn" prefWidth="118.0" text="生产厂家" />
+                              <TableColumn fx:id="kucunstorageColumn" prefWidth="118.0" text="存放地" />
+                              <TableColumn fx:id="kucunamountColumn" prefWidth="103.0" text="数量" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="新一批出货名单">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="chuhuo2Table" layoutX="6.0" layoutY="-1.0" prefHeight="284.0" prefWidth="594.0">
+                           <columns>
+                              <TableColumn fx:id="chuhuo2wareNameColumn" prefWidth="126.0" text="货品名" />
+                              <TableColumn fx:id="chuhuo2wareNumberColumn" prefWidth="101.0" text="货品号" />
+                              <TableColumn fx:id="chuhuo2amountColumn" prefWidth="59.0" text="数量" />
+                              <TableColumn fx:id="chuhuo2timeColumn" prefWidth="144.0" text="出货时间" />
+                              <TableColumn fx:id="chuhuo2storageColumn" prefWidth="86.0" text="存放地" />
+                              <TableColumn fx:id="chuhuo2approvedColumn" prefWidth="68.0" text="是否通过？" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="commitButton2" layoutX="517.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#on_commit2_clicked" text="提交" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="缺货名单">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="quehuoTable" layoutX="1.0" layoutY="-2.0" prefHeight="316.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="quehuowareNameColumn" prefWidth="119.0" text="货品名" />
+                            <TableColumn fx:id="quehuowareNumberColumn" prefWidth="122.0" text="货品号" />
+                              <TableColumn fx:id="quehuoamountColumn" prefWidth="109.0" text="缺货数量" />
+                              <TableColumn fx:id="quehuotimeColumn" prefWidth="163.0" text="缺货时间" />
+                              <TableColumn fx:id="quehuostorageColumn" prefWidth="78.0" text="存放地" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="exitButton" layoutX="524.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#on_exit_clicked" text="退出" />
+   </children>
+</AnchorPane>

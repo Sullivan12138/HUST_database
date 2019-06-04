@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.jinhuoController">
+   <children>
+      <TableView fx:id="jinhuoTable" layoutY="95.0" prefHeight="291.0" prefWidth="524.0">
+         <columns>
+            <TableColumn fx:id="wareNameColumn" prefWidth="75.0" text="货品名" />
+            <TableColumn fx:id="wareNumberColumn" prefWidth="75.0" text="货品号" />
+            <TableColumn fx:id="timeColumn" prefWidth="136.0" text="进货时间" />
+            <TableColumn fx:id="amountColumn" prefWidth="64.0" text="数量" />
+            <TableColumn fx:id="storageColumn" prefWidth="81.0" text="存放地" />
+            <TableColumn fx:id="factoryColumn" prefWidth="92.0" text="生产厂家" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="254.0" layoutY="21.0" prefHeight="54.0" prefWidth="93.0" text="进货单" textFill="#e41de4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="exitButton" buttonType="RAISED" defaultButton="true" layoutX="528.0" layoutY="347.0" onMouseClicked="#on_exit_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="退出" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+
+      <JFXButton fx:id="deleteButton" buttonType="RAISED" defaultButton="true" layoutX="528.0" layoutY="108.0" onMouseClicked="#on_delete_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="删除" textFill="#da0f78">
+         <effect>
+            <Reflection bottomOpacity="0.22" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

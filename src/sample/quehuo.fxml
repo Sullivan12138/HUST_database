@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.1457286432160804" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.quehuoController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label alignment="CENTER" layoutX="252.0" layoutY="11.0" prefHeight="33.0" prefWidth="95.0" text="缺货单" textFill="#da0b99">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="exitButton" buttonType="RAISED" defaultButton="true" layoutX="519.0" layoutY="12.0" onMouseClicked="#on_exit_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="退出" textFill="#da0f78">
+               <effect>
+                  <Reflection bottomOpacity="0.22" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="337.0" prefWidth="600.0" />
+            <TableView fx:id="quehuoTable" layoutX="-1.0" prefHeight="337.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="wareNameColumn" prefWidth="121.0" text="货品名" />
+                  <TableColumn fx:id="wareNumberColumn" prefWidth="121.0" text="货品号" />
+                  <TableColumn fx:id="amountColumn" prefWidth="108.0" text="缺货数量" />
+                  <TableColumn fx:id="timeColumn" prefWidth="164.0" text="缺货时间" />
+                  <TableColumn fx:id="storageColumn" prefWidth="85.0" text="缺货地点" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

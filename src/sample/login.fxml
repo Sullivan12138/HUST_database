@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.collections.FXCollections?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.loginController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="442.0" prefWidth="522.0">
+         <children>
+            <Label alignment="CENTER" layoutX="190.0" layoutY="25.0" prefHeight="47.0" prefWidth="142.0" text="仓库管理系统" textFill="#3522d6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="229.0" layoutY="149.0" prefHeight="31.0" prefWidth="64.0" text="用户名" textFill="#a31a6e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="244.0" layoutY="226.0" prefHeight="31.0" prefWidth="64.0" text="密码" textFill="#a31a6e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="confirmButton" buttonType="RAISED" defaultButton="true" layoutX="314.0" layoutY="288.0" onMouseClicked="#on_confirm_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#da0e23" style="-fx-background-color: #16e4d0;" text="确定" textFill="#da0f78">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.22" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="clearButton" buttonType="RAISED" defaultButton="true" layoutX="417.0" layoutY="288.0" onMouseClicked="#on_clear_clicked" prefHeight="31.0" prefWidth="58.0" ripplerFill="#dd0b16" style="-fx-background-color: #16e4d0;" text="清除" textFill="#da0f78">
+               <effect>
+                  <Reflection bottomOpacity="0.22" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="account" layoutX="314.0" layoutY="147.0" prefHeight="23.0" prefWidth="161.0">
+               <font>
+                  <Font size="18.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="password" layoutX="314.0" layoutY="224.0" prefHeight="23.0" prefWidth="161.0">
+               <font>
+                  <Font size="18.0" />
+               </font></JFXPasswordField>
+            <JFXComboBox fx:id="loginList" layoutX="196.0" layoutY="292.0" prefHeight="23.0" prefWidth="97.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
