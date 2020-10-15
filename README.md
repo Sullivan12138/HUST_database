@@ -1,4 +1,4 @@
-# HUST_database
+# database-lab
 这是本科数据库实验的代码，用java写的。
 
 运行需要下载jdk8和IDEA，然后导入jfoenix和jdbc这两个jar文件。然后安装MySql，创建一个名叫"warehouse"的仓库，
